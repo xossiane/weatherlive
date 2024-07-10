@@ -1,0 +1,37 @@
+.input input{
+    left: 50%;
+    display: flex;
+    height: 2rem;
+    background-color: transparent;
+    border: 0.05rem solid #8d8c96;
+    border-radius: 3rem;
+    outline: none;
+    color: #303032;
+    padding-left: 2rem;
+    font-size: 1.3rem;
+    flex-direction: column;
+    row-gap: 1rem;
+    font-family: "Lilita One";
+    width: 70%;
+    letter-spacing: 0.1rem;
+}
+.input {
+    display: flex;
+    justify-content: center;
+}
+.input input::placeholder{
+    font-family: "Lilita One";
+   font-size: 1rem;
+   color: #8d8c96;
+   letter-spacing: 0.1rem;
+
+}
+.input input:focus::placeholder{
+   color: transparent;
+}
+
+.input i{
+    position: absolute;
+    transform: translateY(53%);
+    right: 20%;
+ }

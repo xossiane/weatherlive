@@ -1,0 +1,77 @@
+.weather-city {
+  font-size: 2rem;
+  color: #484569;
+  letter-spacing: 0.3rem;
+  text-align: center;
+}
+
+.weather-type {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #484569;
+  font-family: "Lilita One";
+  font-weight: 200;
+  text-align: center;
+  bottom: 2rem;
+}
+
+.weather-temp {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 5rem;
+  font-family: "Lilita One";
+  background-image: linear-gradient(to right, #2f2e57, #605d80);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0.5rem 0.5rem 1rem rgba(0,0, 0,0.2);
+}
+
+.weather-data{
+  width: 75%;
+  bottom: 35%;
+  position: absolute;
+  display: flex;
+  column-gap: 2rem;
+  padding: 0 2rem;
+}
+
+.weather-data > div{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.data-name{
+  font-size: 1.2rem;
+
+}
+.weather-data i{
+  position: relative;
+  font-size: 1.5rem;
+  color: #5a5858;
+  text-shadow: -.3rem .3rem .5rem rgba(0, 0, 0, 0.1);
+}
+
+.data{
+  font-size: 1.2rem;
+}
+
+.weather img{
+  position: absolute;
+  z-index: 0;
+  margin-top: 10rem;
+  right: 0;
+  max-width: 50%;
+max-height: 50%
+
+}
