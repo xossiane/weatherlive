@@ -18,17 +18,21 @@ export default function WeatherApp() {
   };
 
   const fetchData = async (searchCity) => {
-    const query = searchCity ? `q=${searchCity}` : `lat=${lat}&lon=${long}`;
-    try {
-      const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?${query}&units=metric&appid=${API_KEY}`
-      );
-      const result = await response.json();
-      setData(result);
-      console.log(result);
-    } catch (error) {
-      console.error("Error fetching the weather data:", error);
-    }
+    
+      const query = searchCity ? `q=${searchCity}` : `lat=${lat}&lon=${long}`;
+      try {
+        const response = await fetch(
+          `https://api.openweathermap.org/data/2.5/weather?${query}&units=metric&appid=${API_KEY}`
+        );
+        const result = await response.json();
+        setData(result);
+        console.log(result);
+        setInputValue(""); // Clear the input after fetching data
+      } catch (error) {
+        console.error("Error fetching the weather data:", error);
+      }
+    
+   
   };
 
   useEffect(() => {
@@ -53,6 +57,8 @@ export default function WeatherApp() {
       fetchData(city);
     }
   };
+
+
 
   return (
     <div className="App">

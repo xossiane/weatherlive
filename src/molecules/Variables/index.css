@@ -3,6 +3,25 @@
   color: #484569;
   letter-spacing: 0.3rem;
   text-align: center;
+   font-family: "Lilita One";
+}
+
+.weather-country{
+  font-size: 2rem;
+  color: #484569;
+  letter-spacing: 0.3rem;
+  text-align: center;
+  margin-left: 1rem;
+}
+
+.weather-location{
+  display: flex;
+  font-size: 2rem;
+  color: #484569;
+  letter-spacing: 0.3rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .weather-type {
