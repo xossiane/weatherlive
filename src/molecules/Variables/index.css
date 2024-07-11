@@ -7,7 +7,7 @@
 
 .weather-type {
   position: absolute;
-  top: 28%;
+  top: 18%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
@@ -20,7 +20,7 @@
 
 .weather-temp {
   position: absolute;
-  top: 36%;
+  top: 27%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 5rem;
@@ -33,7 +33,7 @@
 
 .weather-data{
   width: 75%;
-  bottom: 35%;
+  bottom: 40%;
   position: absolute;
   display: flex;
   column-gap: 2rem;
