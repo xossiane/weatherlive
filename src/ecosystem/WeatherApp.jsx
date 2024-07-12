@@ -12,7 +12,8 @@ export default function WeatherApp() {
   const [city, setCity] = useState("");
   const [data, setData] = useState([]);
   const [inputValue, setInputValue] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [locationDenied, setLocationDenied] = useState(false);
 
   const backgroundImages = {
     Clear: "linear-gradient(to right, #f3b07c, #fcd283)",
@@ -39,8 +40,8 @@ export default function WeatherApp() {
       const response = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?${query}&units=metric&appid=${API_KEY}`
       );
-      setLoading(false);
       const result = await response.json();
+      setLoading(false);
       if (result.cod !== 200) {
         setData({ notFound: true });
       } else {
@@ -50,22 +51,30 @@ export default function WeatherApp() {
       }
     } catch (error) {
       console.error("Error fetching the weather data:", error);
+      setLoading(false);
     }
   };
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      setLat(position.coords.latitude);
-      setLong(position.coords.longitude);
-      
-    });
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        setLat(position.coords.latitude);
+        setLong(position.coords.longitude);
+      },
+      (error) => {
+        if (error.code === error.PERMISSION_DENIED) {
+          setLocationDenied(true);
+        }
+        setLoading(false);
+      }
+    );
   }, []);
 
   useEffect(() => {
-    
     if (lat && long) {
       fetchData();
-      
+    } else {
+      setLoading(false);
     }
   }, [lat, long]);
 
@@ -83,7 +92,7 @@ export default function WeatherApp() {
 
   return (
     <div className="App">
-      <div className="container " style={{ backgroundImage }}>
+      <div className="container" style={{ backgroundImage }}>
         <section className="weather-app" style={{ backgroundImage }}>
           <Input
             inputValue={inputValue}
@@ -97,17 +106,18 @@ export default function WeatherApp() {
             <Variables data={data} />
           ) : (
             <h1>
-              {loading ? (
-                <img className="loader" src={loadingGif} alt="loading" />
-              ) : (
-                  data.notFound ? (<span className="not-found">Data not found 🤹 <br /> Hit refresh and try again</span>) : (<span className="not-found">
+              {data.notFound ? (
+                <span className="not-found">
+                  Data not found 🤹 <br /> Hit refresh and try again
+                </span>
+              ) : locationDenied ? (
+                <span className="not-found">
                   You must accept the pop-up location from browser so we can
                   help you
-                </span>) 
-                
+                </span>
+              ) : (
+                <img className="loader" src={loadingGif} alt="loading" />
               )}
-            
-    
             </h1>
           )}
         </section>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./index.css";
 import sunny from "../../assets/images/sunny.png";
 import cloudy from "../../assets/images/cloudy.png";
@@ -6,6 +6,8 @@ import rainy from "../../assets/images/rainy.png";
 import snowy from "../../assets/images/snowy.png";
 
 function Variables({ data }) {
+  const [isCelsius, setIsCelsius] = useState(true);
+
   const weatherImages = {
     Clear: sunny,
     Clouds: cloudy,
@@ -19,6 +21,16 @@ function Variables({ data }) {
     ? weatherImages[data.weather[0].main]
     : null;
 
+
+  const toggleTemperature = () => {
+    setIsCelsius(!isCelsius);
+  };
+
+  const temperature = isCelsius
+  ? `${Math.round(data.main.temp)} ºC`
+  : `${Math.round(data.main.temp * 9/5 + 32)} ºF`;
+
+
   return (
     <>
       <div className="weather">
@@ -28,7 +40,12 @@ function Variables({ data }) {
           <h2 className="weather-country">{data.sys.country}</h2>
         </div>
         <div className="weather-type">{data.weather[0].description}</div>
-        <div className="weather-temp">{Math.round(data.main.temp)} ºC</div>
+        <div className="weather-temp">
+          {temperature}
+          <button onClick={toggleTemperature} className="toggle-button">
+            {isCelsius ? "Convert to ºF" : "Convert to ºC"}
+          </button>
+        </div>
         <div className="weather-data">
           <div className="humidity">
             <div className="data-name">Humidity</div>
