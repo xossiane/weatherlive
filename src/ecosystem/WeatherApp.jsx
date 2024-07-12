@@ -91,7 +91,7 @@ export default function WeatherApp() {
   };
 
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundImage }}>
       <div className="container" style={{ backgroundImage }}>
         <section className="weather-app" style={{ backgroundImage }}>
           <Input
