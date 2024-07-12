@@ -6,18 +6,18 @@ import rainy from "../../assets/images/rainy.png";
 import snowy from "../../assets/images/snowy.png";
 
 function Variables({ data }) {
+  const weatherImages = {
+    Clear: sunny,
+    Clouds: cloudy,
+    Rain: rainy,
+    Snow: snowy,
+    Haze: cloudy,
+    Mist: cloudy,
+  };
 
-    const weatherImages = {
-        Clear: sunny,
-        Clouds: cloudy,
-        Rain: rainy,
-        Snow: snowy,
-        Haze: cloudy,
-        Mist: cloudy,
-      }
-      
-      const weatherImage = data.weather ? weatherImages[data.weather[0].main] : null
-
+  const weatherImage = data.weather
+    ? weatherImages[data.weather[0].main]
+    : null;
 
   return (
     <>

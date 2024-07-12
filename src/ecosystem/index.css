@@ -1,6 +1,5 @@
 .container{
     max-width: 100%;
-    background-image: linear-gradient(to right, #f3b07c, #fcd283);
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -12,13 +11,32 @@
 .weather-app{
     width: 35rem;
     height: 50rem;
-    background-image: linear-gradient(to top, #f3b07c, #fcd283);
+   
     border-radius: 3rem;
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-    box-shadow: -3rem 1rem 6rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0rem 6rem 13rem rgba(0, 0, 0, 0.3);
     position: relative;
     
 }
 
+.not-found{
+    font-size: 3rem;
+    color: #484569;
+    margin: 10rem auto;
+    text-shadow: -.3rem .5rem 1rem rgba(0,0,0,0.2);
+    text-align: center;
+    display: flex;
+    line-break: auto;
+
+    width: 80%;
+
+}
+
+.loader{
+    width: 5rem;
+    margin-left: 40%;
+    margin-top: 50%;
+    
+}
