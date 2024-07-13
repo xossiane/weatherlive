@@ -127,3 +127,7 @@
     align-self: center;
     color: #5a5858;
   }
+
+  .toggle-button-temperature:active {
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
