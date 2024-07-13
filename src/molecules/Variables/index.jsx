@@ -33,43 +33,34 @@ function Variables({ data }) {
 
   return (
     <>
-      <div className="weather">
+      <div className="weather" role="region" aria-labelledby="weather-heading">
         <img src={weatherImage} alt="sunny" />
         <div className="weather-location">
-          <h2 className="weather-city">{data.name}</h2>{" "}
-          <h2 className="weather-country">{data.sys.country}</h2>
+          <h2 className="weather-city" aria-label={`City: ${data.name}`}>{data.name}</h2>{" "}
+          <h2 className="weather-country" aria-label={`Country: ${data.sys.country}`}>{data.sys.country}</h2>
         </div>
-        <div className="weather-type">{data.weather[0].description}</div>
-        <div className="weather-temp">
+        <div className="weather-type" aria-label={`Weather type: ${data.weather[0].description}`}>{data.weather[0].description}</div>
+        <div className="weather-temp" aria-live="polite">
           {temperature}
-          <button onClick={toggleTemperature} className="toggle-button">
+          <button onClick={toggleTemperature} className="toggle-button"  aria-pressed={!isCelsius}
+          aria-label={`Convert to ${isCelsius ? 'Fahrenheit' : 'Celsius'}`}>
             {isCelsius ? "Convert to ºF" : "Convert to ºC"}
           </button>
         </div>
         <div className="weather-data">
-          <div className="humidity">
+          <div className="humidity" aria-label={`Humidity: ${data.main.humidity}%`}>
             <div className="data-name">Humidity</div>
-            <i className="fa-solid fa-droplet"></i>
+            <i className="fa-solid fa-droplet" aria-hidden="true"></i>
             <div className="data">{data.main.humidity}%</div>
           </div>
-          <div className="wind">
+          <div className="wind" aria-label={`Wind speed: ${data.wind.speed} km/h`}>
             <div className="data-name">Wind</div>
-            <i className="fa-solid fa-wind"></i>
+            <i className="fa-solid fa-wind" aria-hidden="true"></i>
             <div className="data">{data.wind.speed}km/h</div>
           </div>
         </div>
       </div>
 
-      {/* <ul>
-    <li>Temperatura atual: {data.main.temp}ºC </li>
-    <li>Temperatura máxima: {data.main.temp_max}ºC </li>
-    <li>Temperatura mínima: {data.main.temp_min}ºC </li>
-    <li>Descrição do tempo: {data.weather[0].description} </li>
-    <li>Temperatura mínima: {data.main.temp_min}ºC </li>
-    <li>Pressão: {data.main.pressure} hpa </li>
-    <li>Umidade: {data.main.humidity}% </li>
-    <li>Velocidade do Vento: {data.wind.speed}km/h </li>
-  </ul> */}
     </>
   );
 }

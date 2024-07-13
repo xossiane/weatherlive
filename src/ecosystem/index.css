@@ -8,10 +8,6 @@
 height: 100vh;
 }
 
-.App{
-    
-}
-
 .weather-app{
     width: 100%;
     border-radius: 3rem;
@@ -19,7 +15,6 @@ height: 100vh;
     box-shadow: 0rem 6rem 13rem rgba(0, 0, 0, 0.3);
     position: relative;
     margin: 2rem;
-    /* display: flex; */
     flex-direction: column;
     max-width: 53.5rem;
 }
@@ -28,18 +23,23 @@ height: 100vh;
     font-size: 3rem;
     color: #484569;
     margin: 10rem auto;
-    text-shadow: -.3rem .5rem 1rem rgba(0,0,0,0.2);
+    text-shadow: -.3rem .5rem 1rem rgba(0, 0, 0, 0.2);
     text-align: center;
     display: flex;
     line-break: auto;
-
-    width: 80%;
+    align-items: center;
+    justify-content: center;
 
 }
 
 .loader{
     width: 5rem;
-    margin-left: 40%;
-    margin-top: 50%;
+ display: flex;
+ margin-top: 25%;
+ margin-left: 43%;
+
     
+}
+.loader-container{
+    height: 50vh;
 }

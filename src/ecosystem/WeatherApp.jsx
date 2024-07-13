@@ -17,11 +17,12 @@ export default function WeatherApp() {
 
   const backgroundImages = {
     Clear: "linear-gradient(to right, #f3b07c, #fcd283)",
-    Clouds: "linear-gradient(to right, #57d6d4, #71eeec)",
+    Clouds: "linear-gradient(to right, #5DA8A8, #84ECEC)",
     Rain: "linear-gradient(to right, #5bc8fb, #80eaff)",
     Snow: "linear-gradient(to right, #aff2ff, #fff)",
     Haze: "linear-gradient(to right, #57d6d4, #71eeec)",
-    Mist: "linear-gradient(to right, #57d6d4, #71eeec)",
+    Mist: "linear-gradient(to right, #95D5D5, #B5DEDE)",
+    
   };
 
   const backgroundImage = data.weather
@@ -101,11 +102,13 @@ export default function WeatherApp() {
             onEnterKey={handleEnterKey}
           />
           {loading ? (
+            <div className="loader-container">
             <img className="loader" src={loadingGif} alt="loading" />
+            </div>
           ) : data.main && data.weather ? (
             <Variables data={data} />
           ) : (
-            <h1>
+            <>
               {data.notFound ? (
                 <span className="not-found">
                   Data not found 🤹 <br /> Hit refresh and try again
@@ -116,9 +119,11 @@ export default function WeatherApp() {
                   help you
                 </span>
               ) : (
+                <div className="loader-container">
                 <img className="loader" src={loadingGif} alt="loading" />
+                </div>
               )}
-            </h1>
+            </>
           )}
         </section>
       </div>

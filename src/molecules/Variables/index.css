@@ -1,4 +1,4 @@
-.weather{
+.weather {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,10 +9,10 @@
   color: #484569;
   letter-spacing: 0.3rem;
   text-align: center;
-   font-family: "Lilita One";
+  font-family: "Lilita One";
 }
 
-.weather-country{
+.weather-country {
   font-size: 2rem;
   color: #484569;
   letter-spacing: 0.3rem;
@@ -20,7 +20,7 @@
   margin-left: 1rem;
 }
 
-.weather-location{
+.weather-location {
   display: flex;
   font-size: 2rem;
   color: #484569;
@@ -31,25 +31,21 @@
 }
 
 .weather-type {
-     /* position: absolute; */
-     top: 18%;
-     left: 50%;
-     /* transform: translateX(-50%); */
-     font-size: 2rem;
-     color: #484569;
-     font-family: "Lilita One";
-     font-weight: 200;
-     text-align: center;
- 
+  top: 18%;
+  left: 50%;
+
+  font-size: 2rem;
+  color: #484569;
+  font-family: "Lilita One";
+  font-weight: 200;
+  text-align: center;
 }
 
 .weather-temp {
   display: flex;
   flex-direction: column;
-  /* position: absolute; */
   top: 27%;
   left: 50%;
-  /* transform: translateX(-50%); */
   font-size: 5rem;
   font-family: "Lilita One";
   background-image: linear-gradient(to right, #2f2e57, #605d80);
@@ -60,9 +56,8 @@
   z-index: 4;
 }
 
-.weather-data{
+.weather-data {
   width: 100%;
-  /* position: absolute; */
   display: flex;
   column-gap: 0.5rem;
   padding: 0 1rem;
@@ -70,7 +65,7 @@
   z-index: 1;
 }
 
-.weather-data > div{
+.weather-data > div {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -81,34 +76,32 @@
   border-radius: 1rem;
 }
 
-.data-name{
+.data-name {
   font-size: 1.2rem;
-
 }
-.weather-data i{
+.weather-data i {
   position: relative;
   font-size: 1.5rem;
   color: #5a5858;
-  text-shadow: -.3rem .3rem .5rem rgba(0, 0, 0, 0.1);
+  text-shadow: -0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
-.data{
+.data {
   font-size: 1.2rem;
 }
 
-.weather img{
+.weather img {
   position: absolute;
   z-index: 0;
   margin-top: 10rem;
   right: 0;
   max-width: 50%;
-max-height: 50%
-
+  max-height: 50%;
 }
 
-.toggle-button{
+.toggle-button {
   font-family: "Lilita One";
- padding: 0.6rem;
+  padding: 0.6rem;
   background-color: transparent;
   border: 0.05rem solid #8d8c96;
   border-radius: 3rem;
