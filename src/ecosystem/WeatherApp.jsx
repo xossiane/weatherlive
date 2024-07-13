@@ -3,6 +3,7 @@ import Variables from "../molecules/Variables";
 import Input from "../molecules/Input";
 import "./index.css";
 import loadingGif from "../assets/images/loading.gif";
+import Forecast from "../molecules/Forecast";
 
 export default function WeatherApp() {
   const API_KEY = "479be88a723f6289ab496d4f48b1fb98";
@@ -14,6 +15,7 @@ export default function WeatherApp() {
   const [inputValue, setInputValue] = useState("");
   const [loading, setLoading] = useState(true);
   const [locationDenied, setLocationDenied] = useState(false);
+  const [showForecast, setShowForecast] = useState(false); // State to toggle forecast visibility
 
   const backgroundImages = {
     Clear: "linear-gradient(to right, #f3b07c, #fcd283)",
@@ -90,10 +92,17 @@ export default function WeatherApp() {
     }
   };
 
+  const toggleForecast = () => {
+    setShowForecast(!showForecast);
+  };
+
+
+
   return (
     <div className="App" style={{ backgroundImage }}>
       <div className="container" style={{ backgroundImage }}>
         <section className="weather-app" style={{ backgroundImage }}>
+        
           <Input
             inputValue={inputValue}
             onInputChange={handleInputChange}
@@ -105,7 +114,16 @@ export default function WeatherApp() {
               <img className="loader" src={loadingGif} alt="loading" />
             </div>
           ) : data.main && data.weather ? (
-            <Variables data={data} />
+            <>
+              <Variables data={data} />
+              <div className="Forecast-block">
+              <button onClick={toggleForecast} className="toggle-forecast-button">
+                {showForecast ? "Hide Forecast" : "Show Forecast"}
+              </button>
+              {showForecast && <Forecast lat={lat} lon={long} API_KEY={API_KEY} />}
+              </div>
+              
+            </>
           ) : (
             <>
               {data.notFound ? (

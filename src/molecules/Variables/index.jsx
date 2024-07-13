@@ -30,11 +30,17 @@ function Variables({ data }) {
   ? `${Math.round(data.main.temp)} ºC`
   : `${Math.round(data.main.temp * 9/5 + 32)} ºF`;
 
+  const getCurrentDate = () => {
+    const date = new Date();
+    return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+  };
+  const currentDate = getCurrentDate();
 
   return (
     <>
       <div className="weather" role="region" aria-labelledby="weather-heading">
         <img src={weatherImage} alt="sunny" />
+        <h2 className="weather-date">{`Today: ${currentDate}`}</h2>
         <div className="weather-location">
           <h2 className="weather-city" id="weather-heading" aria-label={`City: ${data.name}`}>{data.name}</h2>{" "}
           <h2 className="weather-country" aria-label={`Country: ${data.sys.country}`}>{data.sys.country}</h2>

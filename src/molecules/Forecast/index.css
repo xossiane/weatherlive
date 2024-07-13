@@ -1,0 +1,129 @@
+.forecast {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+    align-items: center;
+    width: 95%;
+  }
+  @media (max-width: 600px) {
+    .forecast {
+      grid-template-columns: 1fr;
+    }
+    .forecast-date{
+      margin-top: 5%;
+    }
+    .forecast-data{
+      padding: 0.5rem;
+      align-items: baseline;
+    }
+    .forecast-data > div{
+      padding: 0.5rem;
+      align-items: baseline;
+    }
+
+  }
+  
+  
+  .forecast-city {
+    font-size: 2rem;
+    color: #484569;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    font-family: "Lilita One";
+  }
+  
+  .forecast-date{
+    font-size: 1.2rem;
+    color: #484569;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    font-family: "Lilita One";
+    margin-top: 5%;
+  }
+
+  .forecast-type {
+    top: 18%;
+    left: 50%;
+    font-size: 1rem;
+    color: #484569;
+    font-family: "Lilita One";
+    font-weight: 200;
+    text-align: center;
+  }
+  
+  .forecast-temp {
+    display: flex;
+    flex-direction: column;
+    top: 27%;
+    left: 50%;
+    font-size: 1.5rem;
+    font-family: "Lilita One";
+    background-image: linear-gradient(to right, #2f2e57, #605d80);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    align-items: center;
+    z-index: 4;
+  }
+  
+  .forecast-data {
+    width: 100%;
+    display: flex;
+    column-gap: 0.5rem;
+    padding: 0 1rem;
+    margin-top: 2rem;
+    z-index: 1;
+    margin-bottom: 2rem;
+  }
+  
+  .forecast-data > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+  
+  .data-name {
+    font-size: 1rem;
+  }
+  .forecast-data i {
+    position: relative;
+    font-size: 1.5rem;
+    color: #5a5858;
+    text-shadow: -0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
+  }
+  
+  .data {
+    font-size: 1.2rem;
+  }
+  
+  
+  .toggle-button {
+    font-family: "Lilita One";
+    padding: 0.6rem;
+    background-color: transparent;
+    border: 0.05rem solid #8d8c96;
+    border-radius: 3rem;
+    outline: none;
+  }
+  .toggle-button:active {
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .toggle-button-temperature{
+    font-family: "Lilita One";
+    padding: 0.6rem;
+    background-color: transparent;
+    border: 0.05rem solid #8d8c96;
+    border-radius: 3rem;
+    outline: none;
+    margin-top: 3%;
+    width: 80%;
+    align-self: center;
+    color: #5a5858;
+  }
