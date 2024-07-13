@@ -22,7 +22,6 @@ export default function WeatherApp() {
     Snow: "linear-gradient(to right, #aff2ff, #fff)",
     Haze: "linear-gradient(to right, #57d6d4, #71eeec)",
     Mist: "linear-gradient(to right, #95D5D5, #B5DEDE)",
-    
   };
 
   const backgroundImage = data.weather
@@ -103,7 +102,7 @@ export default function WeatherApp() {
           />
           {loading ? (
             <div className="loader-container">
-            <img className="loader" src={loadingGif} alt="loading" />
+              <img className="loader" src={loadingGif} alt="loading" />
             </div>
           ) : data.main && data.weather ? (
             <Variables data={data} />
@@ -120,7 +119,7 @@ export default function WeatherApp() {
                 </span>
               ) : (
                 <div className="loader-container">
-                <img className="loader" src={loadingGif} alt="loading" />
+                  <img className="loader" src={loadingGif} alt="loading" />
                 </div>
               )}
             </>

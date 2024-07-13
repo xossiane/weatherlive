@@ -36,7 +36,7 @@ function Variables({ data }) {
       <div className="weather" role="region" aria-labelledby="weather-heading">
         <img src={weatherImage} alt="sunny" />
         <div className="weather-location">
-          <h2 className="weather-city" aria-label={`City: ${data.name}`}>{data.name}</h2>{" "}
+          <h2 className="weather-city" id="weather-heading" aria-label={`City: ${data.name}`}>{data.name}</h2>{" "}
           <h2 className="weather-country" aria-label={`Country: ${data.sys.country}`}>{data.sys.country}</h2>
         </div>
         <div className="weather-type" aria-label={`Weather type: ${data.weather[0].description}`}>{data.weather[0].description}</div>
