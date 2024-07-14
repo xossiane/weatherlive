@@ -32,7 +32,7 @@ export default function WeatherApp() {
 
   const handleInputChange = (value) => {
     setInputValue(value);
-    setCity(value);
+    setCity(value.trim());
   };
 
   const fetchData = async (searchCity) => {
@@ -82,13 +82,13 @@ export default function WeatherApp() {
 
   const handleIconClick = () => {
     if (city) {
-      fetchData(city);
+      fetchData(city.trim());
     }
   };
 
   const handleEnterKey = (event) => {
     if (event.key === "Enter" && city) {
-      fetchData(city);
+      fetchData(city.trim());
     }
   };
 

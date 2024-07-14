@@ -17,10 +17,7 @@
       padding: 0.5rem;
       align-items: baseline;
     }
-    .forecast-data > div{
-      padding: 0.5rem;
-      align-items: baseline;
-    }
+    
 
   }
   
@@ -75,6 +72,7 @@
     margin-top: 2rem;
     z-index: 1;
     margin-bottom: 2rem;
+    margin-left: -0.655rem;
   }
   
   .forecast-data > div {
@@ -84,8 +82,9 @@
     align-items: center;
     row-gap: 1.5rem;
     background-color: rgba(255, 255, 255, 0.2);
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 1rem;
+    
   }
   
   .data-name {
