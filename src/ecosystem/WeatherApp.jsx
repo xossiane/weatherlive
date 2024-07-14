@@ -77,6 +77,7 @@ export default function WeatherApp() {
     } else {
       setLoading(false);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lat, long]);
 
   const handleIconClick = () => {
