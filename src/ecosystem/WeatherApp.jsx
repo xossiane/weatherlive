@@ -8,14 +8,14 @@ import Forecast from "../molecules/Forecast";
 export default function WeatherApp() {
   const API_KEY = "479be88a723f6289ab496d4f48b1fb98";
 
-  const [lat, setLat] = useState();
-  const [long, setLong] = useState();
+  const [lat, setLat] = useState(null);
+  const [long, setLong] = useState(null);
   const [city, setCity] = useState("");
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({});
   const [inputValue, setInputValue] = useState("");
   const [loading, setLoading] = useState(true);
   const [locationDenied, setLocationDenied] = useState(false);
-  const [showForecast, setShowForecast] = useState(false); // State to toggle forecast visibility
+  const [showForecast, setShowForecast] = useState(false);
 
   const backgroundImages = {
     Clear: "linear-gradient(to right, #f3b07c, #fcd283)",
@@ -48,8 +48,7 @@ export default function WeatherApp() {
         setData({ notFound: true });
       } else {
         setData(result);
-        console.log(result);
-        setInputValue(""); // Clear the input after fetching data
+        setInputValue("");
       }
     } catch (error) {
       console.error("Error fetching the weather data:", error);
@@ -78,17 +77,16 @@ export default function WeatherApp() {
     } else {
       setLoading(false);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lat, long]);
 
   const handleIconClick = () => {
-    setLoading(true);
-    fetchData(city);
-    setLoading(false);
+    if (city) {
+      fetchData(city);
+    }
   };
 
   const handleEnterKey = (event) => {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" && city) {
       fetchData(city);
     }
   };
@@ -97,13 +95,10 @@ export default function WeatherApp() {
     setShowForecast(!showForecast);
   };
 
-
-
   return (
     <div className="App" style={{ backgroundImage }}>
       <div className="container" style={{ backgroundImage }}>
         <section className="weather-app" style={{ backgroundImage }}>
-        
           <Input
             inputValue={inputValue}
             onInputChange={handleInputChange}
@@ -118,12 +113,11 @@ export default function WeatherApp() {
             <>
               <Variables data={data} />
               <div className="Forecast-block">
-              <button onClick={toggleForecast} className="toggle-forecast-button">
-                {showForecast ? "Hide Forecast" : "Show Forecast"}
-              </button>
-              {showForecast && <Forecast lat={lat} lon={long} API_KEY={API_KEY} />}
+                <button onClick={toggleForecast} className="toggle-forecast-button">
+                  {showForecast ? "Hide Forecast" : "Show Forecast"}
+                </button>
+                {showForecast && <Forecast lat={lat} lon={long} API_KEY={API_KEY} />}
               </div>
-              
             </>
           ) : (
             <>
