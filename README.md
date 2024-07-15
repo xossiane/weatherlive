@@ -4,7 +4,7 @@ Welcome to WeatherLive! This application provides real-time weather information,
 
 ## Table of Contents 📖
 
-- [Features](#features)
+- [Features](#features✨)
 - [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
