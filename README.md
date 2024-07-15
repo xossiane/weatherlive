@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# WeatherApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![WeatherApp Logo](./assets/images/logo.png)
 
-## Available Scripts
+Welcome to WeatherApp! This application provides real-time weather information, including temperature, humidity, wind speed, and a 5-day forecast for any city around the globe. Whether you're planning your day, a trip, or just curious about the weather, WeatherApp has you covered.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Features](#features)
+- [Demo](#demo)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Running Tests](#running-tests)
+- [Technologies](#technologies)
+- [API](#api)
+- [Contributing](#contributing)
+- [License](#license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Real-Time Weather Data**: Get up-to-date weather information for any city.
+- **5-Day Forecast**: Plan ahead with our detailed 5-day weather forecast.
+- **Temperature Conversion**: Switch between Celsius and Fahrenheit.
+- **Geolocation**: Automatically get the weather for your current location.
+- **Responsive Design**: Access the app on any device, from mobile to desktop.
+- **Country Flags**: View country flags for a more engaging experience.
 
-### `npm test`
+## Demo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Check out our live demo [here](https://weatherlive-forecast.netlify.app/).
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run this application locally, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/xossiane/weatherlive
+    cd weatherlive
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-### `npm run eject`
+3. **Start the application**:
+    ```bash
+    npm start
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    The app will be available at `http://localhost:3000`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Search for a city**: Enter the name of the city you want to get the weather for in the search bar and press Enter or click the search icon.
+2. **View current weather**: See the current temperature, weather type, humidity, and wind speed.
+3. **Toggle temperature unit**: Click the "Convert to ºF" or "Convert to ºC" button to switch between Celsius and Fahrenheit.
+4. **View 5-day forecast**: Click the "Show Forecast" button to see the upcoming weather for the next 5 days.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Running Tests
 
-## Learn More
+To ensure the application is working as expected, you can run the tests included in the project:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Run tests**:
+    ```bash
+    npm test
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Technologies
 
-### Code Splitting
+- **React**: Frontend framework
+- **CSS**: Styling
+- **OpenWeather API**: Weather data provider
+- **Jest**: Testing framework
+- **React Testing Library**: Testing utilities
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Thank you for using WeatherApp! If you have any questions, feel free to open an issue or reach out to us at [your-email@example.com](mailto:your-email@example.com). Enjoy your weather experience!
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
