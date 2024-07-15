@@ -39,8 +39,10 @@
  }
 
  .search-button{
+    /* z-index: 5;
+    position: absolute;
    width: 2rem;
-   height: 2rem;
+   height: 2rem; */
         all: unset; /* Resets all properties */
         display: flex; /* Ensures the button behaves like an inline-block element */
         cursor: pointer; /* Adds the pointer cursor on hover */
