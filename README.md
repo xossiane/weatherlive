@@ -4,7 +4,7 @@ Welcome to WeatherLive! This application provides real-time weather information,
 
 ## Table of Contents 📖
 
-- [Features](#features✨)
+- [Features](#features)
 - [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -14,7 +14,7 @@ Welcome to WeatherLive! This application provides real-time weather information,
 - [Contributing](#contributing)
 - [License](#license)
 
-## Features ✨
+## Features
 
 - **Real-Time Weather Data**: Get up-to-date weather information for any city.
 - **5-Day Forecast**: Plan ahead with our detailed 5-day weather forecast.
@@ -23,11 +23,11 @@ Welcome to WeatherLive! This application provides real-time weather information,
 - **Responsive Design**: Access the app on any device, from mobile to desktop.
 - **Country Flags**: View country flags for a more engaging experience.
 
-## Demo 📺
+## Demo
 
 Check out our live demo [here](https://weatherlive-forecast.netlify.app/).
 
-## Installation ⚙️
+## Installation
 
 To run this application locally, follow these steps:
 
@@ -49,14 +49,14 @@ To run this application locally, follow these steps:
 
     The app will be available at `http://localhost:3000`.
 
-## Usage 🤹
+## Usage
 
 1. **Search for a city**: Enter the name of the city you want to get the weather for in the search bar and press Enter or click the search icon.
 2. **View current weather**: See the current temperature, weather type, humidity, and wind speed.
 3. **Toggle temperature unit**: Click the "Convert to ºF" or "Convert to ºC" button to switch between Celsius and Fahrenheit.
 4. **View 5-day forecast**: Click the "Show Forecast" button to see the upcoming weather for the next 5 days.
 
-## Running Tests ✅
+## Running Tests
 
 To ensure the application is working as expected, you can run the tests included in the project:
 
@@ -65,7 +65,7 @@ To ensure the application is working as expected, you can run the tests included
     npm test
     ```
 
-## Technologies 🛠️
+## Technologies
 
 - **React**: Frontend framework
 - **CSS**: Styling
