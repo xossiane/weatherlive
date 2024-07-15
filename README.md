@@ -1,10 +1,8 @@
-# WeatherApp
-
-![WeatherApp Logo](./assets/images/logo.png)
+# WeatherApp 🌈🌦️☂️
 
 Welcome to WeatherApp! This application provides real-time weather information, including temperature, humidity, wind speed, and a 5-day forecast for any city around the globe. Whether you're planning your day, a trip, or just curious about the weather, WeatherApp has you covered.
 
-## Table of Contents
+## Table of Contents 📖
 
 - [Features](#features)
 - [Demo](#demo)
@@ -16,7 +14,7 @@ Welcome to WeatherApp! This application provides real-time weather information, 
 - [Contributing](#contributing)
 - [License](#license)
 
-## Features
+## Features ✨
 
 - **Real-Time Weather Data**: Get up-to-date weather information for any city.
 - **5-Day Forecast**: Plan ahead with our detailed 5-day weather forecast.
@@ -25,11 +23,11 @@ Welcome to WeatherApp! This application provides real-time weather information, 
 - **Responsive Design**: Access the app on any device, from mobile to desktop.
 - **Country Flags**: View country flags for a more engaging experience.
 
-## Demo
+## Demo 📺
 
 Check out our live demo [here](https://weatherlive-forecast.netlify.app/).
 
-## Installation
+## Installation ⚙️
 
 To run this application locally, follow these steps:
 
@@ -51,14 +49,14 @@ To run this application locally, follow these steps:
 
     The app will be available at `http://localhost:3000`.
 
-## Usage
+## Usage 🤹
 
 1. **Search for a city**: Enter the name of the city you want to get the weather for in the search bar and press Enter or click the search icon.
 2. **View current weather**: See the current temperature, weather type, humidity, and wind speed.
 3. **Toggle temperature unit**: Click the "Convert to ºF" or "Convert to ºC" button to switch between Celsius and Fahrenheit.
 4. **View 5-day forecast**: Click the "Show Forecast" button to see the upcoming weather for the next 5 days.
 
-## Running Tests
+## Running Tests ✅
 
 To ensure the application is working as expected, you can run the tests included in the project:
 
@@ -67,7 +65,7 @@ To ensure the application is working as expected, you can run the tests included
     npm test
     ```
 
-## Technologies
+## Technologies 🛠️
 
 - **React**: Frontend framework
 - **CSS**: Styling
@@ -76,12 +74,6 @@ To ensure the application is working as expected, you can run the tests included
 - **React Testing Library**: Testing utilities
 
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Thank you for using WeatherApp! If you have any questions, feel free to open an issue or reach out to us at [your-email@example.com](mailto:your-email@example.com). Enjoy your weather experience!
+Thank you for using WeatherApp! If you have any questions, feel free to open an issue or reach out to us at [anejosi.lima@gmail.com](mailto:anejosi.lima@gmail.com). Enjoy your weather experience!
 
 ---
