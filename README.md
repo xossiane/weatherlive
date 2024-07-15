@@ -1,6 +1,6 @@
-# WeatherApp 🌈🌦️☂️
+# WeatherLive 🌈🌦️☂️
 
-Welcome to WeatherApp! This application provides real-time weather information, including temperature, humidity, wind speed, and a 5-day forecast for any city around the globe. Whether you're planning your day, a trip, or just curious about the weather, WeatherApp has you covered.
+Welcome to WeatherLive! This application provides real-time weather information, including temperature, humidity, wind speed, and a 5-day forecast for any city around the globe. Whether you're planning your day, a trip, or just curious about the weather, WeatherApp has you covered.
 
 ## Table of Contents 📖
 
